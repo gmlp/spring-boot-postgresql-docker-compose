@@ -1,18 +1,16 @@
 # Spring Boot app & Postgresql & Docker compose
 
-## 1. Build app & Dockerfile
+## 1. Build app & Docker Image
 
-`mvn clean install`
-
-OR:
-
-`docker run -it --rm --name my-maven-project -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven -v /var/run/:/var/run/ maven mvn clean install`
+```bash
+docker build -t gmlpdou/spring-boot-postgresql:latest .
+```
 
 ## 2. Run docker-compose
 
-`cd src/main/docker`
-
-`docker-compose up`
+```bash
+docker-compose up
+```
 
 **What happens:**
 
